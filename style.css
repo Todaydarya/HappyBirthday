@@ -1,0 +1,543 @@
+/* Базовые стили карточки */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Карточки с одинаковыми поздравлениями */
+.card--grouped {
+    box-shadow: 0 0 20px var(--group-glow), 
+                0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--group-glow);
+    animation: gentleGlow 3s ease-in-out infinite alternate;
+}
+
+.card--grouped:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 30px var(--group-glow), 
+                0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Анимация свечения */
+@keyframes gentleGlow {
+    from {
+        box-shadow: 0 0 15px var(--group-glow), 
+                    0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        box-shadow: 0 0 25px var(--group-glow), 
+                    0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Индикатор группы */
+.card__group-indicator {
+    margin-top: 12px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    border-radius: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #636e72;
+    font-weight: 600;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Остальные стили остаются без изменений */
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.card__name {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2d3436;
+}
+
+.card__relation {
+    font-size: 13px;
+    color: #636e72;
+    margin-top: 2px;
+}
+
+.card__message {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #2d3436;
+    flex-grow: 1;
+}
+
+.card__emoji {
+    display: block;
+    margin-top: 12px;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1a0a2e, #2d1b69, #4a2c8a, #1a0a2e);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* === CONFETTI === */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    top: -10px;
+    opacity: 0;
+    animation: confettiFall linear infinite;
+}
+
+@keyframes confettiFall {
+    0% { opacity: 1; top: -10%; transform: rotate(0deg) translateX(0); }
+    25% { transform: rotate(90deg) translateX(30px); }
+    50% { transform: rotate(180deg) translateX(-20px); }
+    75% { transform: rotate(270deg) translateX(40px); }
+    100% { opacity: 0.3; top: 105%; transform: rotate(360deg) translateX(-10px); }
+}
+
+/* === STARS / SPARKLES === */
+.sparkle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    animation: sparkle 3s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+/* === HEADER === */
+.header {
+    text-align: center;
+    padding: 60px 20px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.header__emoji-top {
+    font-size: 60px;
+    margin-bottom: 10px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.header__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e8b4f8;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease 0.3s both;
+}
+
+.header__title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(40px, 8vw, 80px);
+    background: linear-gradient(135deg, #f8e8ff, #ffb4f8, #ffd4a8, #f8e8ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 5s ease infinite, fadeInUp 1s ease 0.5s both;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.header__name {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(50px, 10vw, 100px);
+    background: linear-gradient(135deg, #ffd700, #ffec80, #ffd700, #fff5cc);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease infinite, fadeInUp 1s ease 0.8s both;
+    display: block;
+    margin-top: 5px;
+}
+
+.header__cake {
+    font-size: 50px;
+    margin-top: 15px;
+    animation: fadeInUp 1s ease 1s both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === DIVIDER === */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.divider__line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e8b4f8, transparent);
+}
+
+.divider__icon {
+    font-size: 24px;
+}
+
+/* === SECTION TITLE === */
+.section-title {
+    text-align: center;
+    padding: 10px 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title h2 {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 700;
+    color: #f0d0ff;
+    letter-spacing: 2px;
+}
+
+.section-title p {
+    font-size: 14px;
+    color: #b89ad4;
+    margin-top: 8px;
+}
+
+/* === CARDS GRID === */
+.cards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 30px 25px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    animation: cardAppear 0.6s ease both;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(180, 100, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
+
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.card__relation {
+    font-size: 12px;
+    color: #c8a8e8;
+    margin-top: 2px;
+}
+
+.card__message {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e0d0f0;
+    position: relative;
+    padding-left: 15px;
+    border-left: 3px solid rgba(200, 150, 255, 0.3);
+}
+
+.card__emoji {
+    font-size: 20px;
+    margin-top: 12px;
+    display: block;
+}
+
+/* === FOOTER === */
+.footer {
+    text-align: center;
+    padding: 40px 20px 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer__hearts {
+    font-size: 30px;
+    letter-spacing: 8px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.footer__text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #a080c0;
+}
+
+/* === FLOATING BALLOONS === */
+.balloon {
+    position: fixed;
+    font-size: 40px;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-10vh) rotate(20deg); opacity: 0; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px 40px;
+    }
+    .card {
+        padding: 22px 18px;
+    }
+}
+
+/* === GOLDEN CARD STYLES === */
+.card--golden {
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), inset 0 0 10px rgba(255, 215, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 215, 0, 0.05));
+}
+
+.card--golden:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.7), 0 0 70px rgba(255, 215, 0, 0.3);
+    border-color: #ffec8b;
+}
+
+.card__click-hint {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #ffd700;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; text-shadow: 0 0 10px #ffd700; }
+}
+
+/* === MODAL STYLES === */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000; /* Поверх всего, даже конфетти */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
+    border: 2px solid #ffd700;
+}
+
+.modal__image {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2001;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.modal__close:hover {
+    color: #ffd700;
+}
