@@ -8,7 +8,7 @@ const cardsData = [
         emoji: "🌟🎈"
     },
     {
-        initial: "М",
+        initial: "К",
         gradient: "linear-gradient(135deg, #a29bfe, #6c5ce7)",
         name: "Кравцов Валерий",
         relation: "128 группа",
@@ -16,7 +16,7 @@ const cardsData = [
         emoji: "💖🌸"
     },
     {
-        initial: "Д",
+        initial: "Ш",
         gradient: "linear-gradient(135deg, #fdcb6e, #e17055)",
         name: "Анастасия Шостак",
         relation: "Коллега",
@@ -24,7 +24,7 @@ const cardsData = [
         emoji: "🏆✨"
     },
     {
-        initial: "О",
+        initial: "Б",
         gradient: "linear-gradient(135deg, #55efc4, #00b894)",
         name: "Бахолдин Даниил",
         relation: "68 группа",
@@ -32,7 +32,7 @@ const cardsData = [
         emoji: "🌊✈️💫"
     },
     {
-        initial: "И",
+        initial: "А",
         gradient: "linear-gradient(135deg, #74b9ff, #0984e3)",
         name: "Анастасия",
         relation: "Кума",
@@ -40,7 +40,7 @@ const cardsData = [
         emoji: "🎉🎂"
     },
     {
-        initial: "Н",
+        initial: "С",
         gradient: "linear-gradient(135deg, #fd79a8, #e84393)",
         name: "Соловьева Саша",
         relation: "126 группа",
@@ -48,7 +48,7 @@ const cardsData = [
         emoji: "🎀🌷💝"
     },
     {
-        initial: "С",
+        initial: "В",
         gradient: "linear-gradient(135deg, #ffeaa7, #fdcb6e)",
         name: "Дарья Васильченко",
         relation: "Преданный поклонник",
@@ -56,15 +56,15 @@ const cardsData = [
         emoji: "📈💼🌟"
     },
     {
-        initial: "В",
+        initial: "Щ",
         gradient: "linear-gradient(135deg, #dfe6e9, #b2bec3)",
         name: "Щербаков Арсений",
         relation: "103 группа",
-        message: "Катуля, с днём рождения! 🥳 Пусть жизнь будет как праздник — яркая, весёлая и наполнена любовью! Желаю тебе найти время для себя и своего счастья. Ты — лучшая!",
+        message: "Екатерина Дмитриевна, вы не просто лучший учитель этого колледжа, вы ещё и один из лучших людей, которых я встречал в своей жизни. Спасибо вам за вашу работу, труд и все, что вы делаете! С днем рождения!",
         emoji: "🎊🎆💃"
     },
     {
-        initial: "А",
+        initial: "К",
         gradient: "linear-gradient(135deg, #e056c6, #8b2fc9)",
         name: "Екатерина Казинцева",
         relation: "117 группа",
@@ -72,7 +72,7 @@ const cardsData = [
         emoji: "🎯🌈🍀"
     },
     {
-        initial: "М",
+        initial: "Г",
         gradient: "linear-gradient(135deg, #a29bfe, #6c5ce7)",
         name: "Софья Губина",
         relation: "74 группа",
@@ -80,7 +80,7 @@ const cardsData = [
         emoji: "🫂"
     },
     {
-        initial: "Д",
+        initial: "В",
         gradient: "linear-gradient(135deg, #fdcb6e, #e17055)",
         name: "Александр Вороненко",
         relation: "22/29 группа",
@@ -88,7 +88,7 @@ const cardsData = [
         emoji: "🎉🍾"
     },
     {
-        initial: "О",
+        initial: "Б",
         gradient: "linear-gradient(135deg, #55efc4, #00b894)",
         name: "Яна Балдина",
         relation: "68 группа",
@@ -96,7 +96,7 @@ const cardsData = [
         emoji: "❤️❤️❤️"
     },
     {
-        initial: "И",
+        initial: "Ш",
         gradient: "linear-gradient(135deg, #74b9ff, #0984e3)",
         name: "Алина Шамелян",
         relation: "117 группа",
@@ -104,7 +104,7 @@ const cardsData = [
         emoji: "🎉"
     },
     {
-        initial: "Н",
+        initial: "З",
         gradient: "linear-gradient(135deg, #fd79a8, #e84393)",
         name: "Владимир Зубарев",
         relation: "87 группа",
@@ -112,7 +112,7 @@ const cardsData = [
         emoji: "🎀🌷💝"
     },
     {
-        initial: "С",
+        initial: "К",
         gradient: "linear-gradient(135deg, #ffeaa7, #fdcb6e)",
         name: "Екатерина Королихина",
         relation: "117 группа",
@@ -120,7 +120,7 @@ const cardsData = [
         emoji: "📈💼🌟"
     },
     {
-        initial: "В",
+        initial: "П",
         gradient: "linear-gradient(135deg, #dfe6e9, #b2bec3)",
         name: "Петров Никита",
         relation: "87 группа",
@@ -128,7 +128,7 @@ const cardsData = [
         emoji: "🎊🎆💃"
     },
     {
-        initial: "А",
+        initial: "Д",
         gradient: "linear-gradient(135deg, #e056c6, #8b2fc9)",
         name: "Марк Дынин",
         relation: "117 группа",
@@ -136,7 +136,7 @@ const cardsData = [
         emoji: "‼️‼️‼️"
     },
     {
-        initial: "М",
+        initial: "Л",
         gradient: "linear-gradient(135deg, #a29bfe, #6c5ce7)",
         name: "Юлия Лачевская",
         relation: "53 группа",
@@ -144,7 +144,7 @@ const cardsData = [
         emoji: "💖🌸"
     },
     {
-        initial: "Д",
+        initial: "Щ",
         gradient: "linear-gradient(135deg, #fdcb6e, #e17055)",
         name: "Элина Щербакова",
         relation: "53 группа",
@@ -152,7 +152,7 @@ const cardsData = [
         emoji: "🏆✨"
     },
     {
-        initial: "О",
+        initial: "У",
         gradient: "linear-gradient(135deg, #55efc4, #00b894)",
         name: "Яна Устименко",
         relation: "74 группа",
@@ -160,7 +160,7 @@ const cardsData = [
         emoji: "🫶🏻🫶🏻🫶🏻"
     },
     {
-        initial: "И",
+        initial: "Т",
         gradient: "linear-gradient(135deg, #74b9ff, #0984e3)",
         name: "Карина Тачалова",
         relation: "68 группа",
@@ -168,7 +168,7 @@ const cardsData = [
         emoji: "❤️❤️❤️"
     },
     {
-        initial: "Н",
+        initial: "М",
         gradient: "linear-gradient(135deg, #fd79a8, #e84393)",
         name: "Альбина Мушенко",
         relation: "68 группа",
@@ -176,7 +176,7 @@ const cardsData = [
         emoji: "🎀🌷💝"
     },
     {
-        initial: "С",
+        initial: "М",
         gradient: "linear-gradient(135deg, #ffeaa7, #fdcb6e)",
         name: "Даниил Михайлов",
         relation: "87 группа",
@@ -184,7 +184,7 @@ const cardsData = [
         emoji: "🎉🎁🫶"
     },
     {
-        initial: "В",
+        initial: "Т",
         gradient: "linear-gradient(135deg, #dfe6e9, #b2bec3)",
         name: "Артемий Тимков",
         relation: "68 группа",
@@ -192,7 +192,7 @@ const cardsData = [
         emoji: "🎊🎆💃"
     },
     {
-        initial: "А",
+        initial: "З",
         gradient: "linear-gradient(135deg, #e056c6, #8b2fc9)",
         name: "Владислав Завгородний",
         relation: "29 группа",
@@ -201,7 +201,7 @@ const cardsData = [
         photo: "img/vlad.png"
     },
     {
-        initial: "М",
+        initial: "О",
         gradient: "linear-gradient(135deg, #a29bfe, #6c5ce7)",
         name: "Озимкина Кристина",
         relation: "87 группа",
@@ -209,7 +209,7 @@ const cardsData = [
         emoji: "💖🌸"
     },
     {
-        initial: "Д",
+        initial: "С",
         gradient: "linear-gradient(135deg, #fdcb6e, #e17055)",
         name: "Селезнёва Полина",
         relation: "87 группа",
